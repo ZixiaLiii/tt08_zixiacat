@@ -9,7 +9,8 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: TinyTapeout/tt-support-tools/actions/test@tt-main
+      - uses: TinyTapeout/tt-support-tools/actions/test@main
+
 
 
 
