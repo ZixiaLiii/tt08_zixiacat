@@ -1,4 +1,4 @@
-name: "Test"
+name: test
 
 on:
   push:
@@ -9,20 +9,51 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout repo
-      uses: actions/checkout@v3
+      - name: Checkout repo
+        uses: actions/checkout@v3
 
-    - name: Install iverilog
-      run: sudo apt-get update && sudo apt-get install -y iverilog
+      - name: Install iverilog
+        run: sudo apt-get install -y iverilog
 
-    - name: Install cocotb requirements
-      run: |
-        python3 -m pip install -r test/requirements.txt
+      - name: Install cocotb requirements
+        run: pip install cocotb
 
-    - name: Run cocotb simulation
-      run: |
-        cd test
-        make
+      # 每个模块单独运行仿真
+      - name: Run test for simple_audio
+        run: |
+          cd test
+          make TEST=simple_audio
+
+      - name: Run test for hvsync
+        run: |
+          cd test
+          make TEST=hvsync
+
+      - name: Run test for fade
+        run: |
+          cd test
+          make TEST=fade
+
+      - name: Run test for bg
+        run: |
+          cd test
+          make TEST=bg
+
+      - name: Run test for stars
+        run: |
+          cd test
+          make TEST=stars
+
+      - name: Run test for sunrise
+        run: |
+          cd test
+          make TEST=sunrise
+
+      - name: Run test for sprite
+        run: |
+          cd test
+          make TEST=sprite
+
 
 
 
