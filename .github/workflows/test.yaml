@@ -1,15 +1,26 @@
 name: "Test"
 
 on:
-  pull_request:
   push:
-    branches: ["main"]
+  pull_request:
 
 jobs:
   test:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: TinyTapeout/tt-support-tools/actions/test@main
+    - name: Checkout repo
+      uses: actions/checkout@v3
+
+    - name: Install cocotb requirements
+      run: |
+        python3 -m pip install -r test/requirements.txt
+
+    - name: Run cocotb simulation
+      run: |
+        cd test
+        make
+
 
 
 
