@@ -1,11 +1,17 @@
-name: "Test"
+name: Test
 
 on:
-  pull_request:
   push:
-    branches: ["main"]
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
 
 jobs:
   test:
-    uses: TinyTapeout/tt-support-tools/.github/workflows/test.yaml@v0.0.4
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Run Test
+        uses: TinyTapeout/tt-support-tools/actions/test@tt08
+
 
