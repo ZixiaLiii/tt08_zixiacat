@@ -1,1 +1,14 @@
+project:
+  name: "tt08_zixiacat"
+  author: "ZixiaLiii"
+  tiles: 2
+  top_module: "tt_um_ZixiaLiii"
+
+  description: "A twilight background with a surfing pixel cat and sound."
+
+  
+  language: "verilog"
+
+  
+  github: "https://github.com/ZixiaLiii/tt08_zixiacat"
 
