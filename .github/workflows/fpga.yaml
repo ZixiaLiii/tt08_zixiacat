@@ -1,0 +1,14 @@
+name: "FPGA"
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+
+jobs:
+  fpga:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run FPGA tests (placeholder)
+        run: echo "No FPGA tests defined"
