@@ -1,3 +1,7 @@
+![gds](https://github.com/ZixiaLiii/tt08_zixiacat/actions/workflows/gds.yaml/badge.svg)
+![docs](https://github.com/ZixiaLiii/tt08_zixiacat/actions/workflows/docs.yaml/badge.svg)
+![test](https://github.com/ZixiaLiii/tt08_zixiacat/actions/workflows/test.yaml/badge.svg)
+![fpga](https://github.com/ZixiaLiii/tt08_zixiacat/actions/workflows/fpga.yaml/badge.svg)
 # Pixel Cat - Twilight Symphony
 
 A full Verilog design for **Tiny Tapeout**, featuring a dynamic twilight background, animated stars, a rising sun, a pixel cat sprite, and synchronized audio output.
