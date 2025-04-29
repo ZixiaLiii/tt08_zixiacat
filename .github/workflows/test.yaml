@@ -18,41 +18,49 @@ jobs:
       - name: Install cocotb requirements
         run: pip install cocotb
 
-      # 每个模块单独运行仿真
+      # 每个模块单独清理并运行仿真
       - name: Run test for simple_audio
         run: |
           cd test
+          rm -rf sim_build
           make TEST=simple_audio
 
       - name: Run test for hvsync
         run: |
           cd test
+          rm -rf sim_build
           make TEST=hvsync
 
       - name: Run test for fade
         run: |
           cd test
+          rm -rf sim_build
           make TEST=fade
 
       - name: Run test for bg
         run: |
           cd test
+          rm -rf sim_build
           make TEST=bg
 
       - name: Run test for stars
         run: |
           cd test
+          rm -rf sim_build
           make TEST=stars
 
       - name: Run test for sunrise
         run: |
           cd test
+          rm -rf sim_build
           make TEST=sunrise
 
       - name: Run test for sprite
         run: |
           cd test
+          rm -rf sim_build
           make TEST=sprite
+
 
 
 
