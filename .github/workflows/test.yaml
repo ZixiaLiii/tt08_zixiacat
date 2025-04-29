@@ -7,8 +7,5 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v2
-      - name: Run Tiny Tapeout test
-        uses: TinyTapeout/tt-support-tools/actions/test@tt08
+    uses: TinyTapeout/tt-support-tools/.github/workflows/test.yaml@v0.0.4
+
