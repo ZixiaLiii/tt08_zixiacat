@@ -1,17 +1,15 @@
-name: Test
+name: "Test"
 
 on:
-  push:
-    branches: [ "main" ]
   pull_request:
-    branches: [ "main" ]
+  push:
+    branches: ["main"]
 
 jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Run Test
-        uses: TinyTapeout/tt-support-tools/actions/test@tt08
+      - uses: TinyTapeout/tt-support-tools/actions/test@tt-main
+
 
 
