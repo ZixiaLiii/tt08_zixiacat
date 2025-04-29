@@ -1,14 +1,10 @@
 project:
-  name: "tt08_zixiacat"
+  name: "Zixiacat VGA Demo"
   author: "ZixiaLiii"
-  tiles: 2
+  description: "Pixel cat with twilight background, sunrise, stars, and music"
   top_module: "tt_um_ZixiaLiii"
-
-  description: "A twilight background with a surfing pixel cat and sound."
-
-  
+  tile: "1x2"
   language: "verilog"
+  clock_hz: 25000000
 
-  
-  github: "https://github.com/ZixiaLiii/tt08_zixiacat"
 
