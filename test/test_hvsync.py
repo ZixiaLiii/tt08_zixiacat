@@ -2,7 +2,7 @@ import cocotb
 from cocotb.triggers import RisingEdge, Timer
 
 @cocotb.test()
-async def test_hvsync_generator(dut):
+async def test_hvsync(dut): 
     dut._log.info("Start hvsync_generator test")
 
     # 初始化复位
